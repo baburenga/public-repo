@@ -17,6 +17,7 @@ provider "aws" {
   resource "aws_instance" "web" {
   ami           = data.aws_ami.server_ami.id
   instance_type = "t2.micro"
+  key_name = "ADC_Demo_Linux"
   tags = {
   Name = "TemporaryVMBuild"
   security_groups = "ADC_Security"
